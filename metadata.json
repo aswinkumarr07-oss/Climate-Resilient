@@ -1,0 +1,7 @@
+{
+  "name": "Climate Resilient - Smart City Disaster Management",
+  "description": "An AI-powered dashboard for climate resilience and disaster management in Indian cities, featuring real-time GIS mapping, predictive analytics, and automated alert systems.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

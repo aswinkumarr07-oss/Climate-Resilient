@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiaResilient | Smart City AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              dark: {
+                bg: '#0f172a',
+                card: '#1e293b',
+                border: '#334155'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; transition: background-color 0.3s ease, color 0.3s ease; }
+        .leaflet-container { height: 100%; width: 100%; border-radius: 0.75rem; }
+        @keyframes pulse-red {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .animate-pulse-red { animation: pulse-red 2s infinite ease-in-out; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(8px); }
+        .dark .glass { background: rgba(30, 41, 59, 0.8); border-color: rgba(255,255,255,0.1); }
+        .dark-glass { background: rgba(17, 24, 39, 0.85); backdrop-filter: blur(12px); }
+        
+        /* Custom scrollbar for dark mode */
+        .dark .custom-scrollbar::-webkit-scrollbar-track { background: #1e293b; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; }
+        
+        /* Leaflet Dark Mode adjustment */
+        .dark .leaflet-tile-pane { filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7); }
+        .dark .leaflet-container { background: #0f172a; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "leaflet": "https://esm.sh/leaflet@^1.9.4",
+    "react-leaflet": "https://esm.sh/react-leaflet@^5.0.0"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-slate-950 dark:text-slate-100">
+    <div id="root"></div>
+</body>
+</html>
